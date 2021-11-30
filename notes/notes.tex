@@ -1,0 +1,178 @@
+\usemodule[m-notes]
+\usemodule[newmat]
+
+\subject{Asymptotic Notation}
+
+    Consider the following theorems.
+
+    Thereom 1 -- Big O Notation:
+    \startformula
+        f(n) = O(g(n)) \text{ if } \exists \text{ } C, N > 0 \text{ such that } 0 \leq f(n) \leq Cg(n) \text{ } \forall \text{ } n \geq N
+    \stopformula
+
+    Thereom 2 -- Big $\Omega$ Notation:
+    \startformula
+        f(n) = \Omega(g(n)) \text{ if } \exists \text{ } c, N > 0 \text { such that } 0 \leq cg(n) \leq f(n) \text{ } \forall \text{ } n \geq N
+    \stopformula
+
+    Thereom 3 -- $\Theta$ Notation:
+    \startformula
+        f(n) = \Theta(g(n)) \text{ } \iff \text{ } f(n) = O(g(n)) \text{ and } f(n) = \Omega(g(n))
+    \stopformula
+
+    The general method to showing that a given $f(n)$ and $g(n)$ satisfies the above Theorems, is to rearrange the inequality with $f(n)/g(n)$ or $g(n)/f(n)$ in the middle of the inequality so it is bounded by zero on the left-hand side and some constant on the right-hand side. The Theorem satisfaction criteria are thus:
+    \startitemize
+        \item If $f(n)/g(n)$ converges, then it will satisfy Theorem 1. It can be said that $f(n)$ does not grow faster than $g(n)$.
+        \item If $f(n)/g(n)$ does not converge, then it is divergent and does not satisfy Theorem 1. There is no need to check the type of divergence.
+        \item If $g(n)/f(n)$ converges, then it will satisfy Theorem 2. It can be said that $f(n)$ does not grow slower than $g(n)$.
+        \item If $g(n)/f(n)$ does not converge, then it is divergent and does not satisfy Theorem 2. There is no need to check the type of divergence.
+    \stopitemize
+
+\subject{Recurrence}
+
+    Using recurrence to solve a problem of size $n$ reduces the problem to $a$ many subproblems of a smaller size $n/b$. The overhead cost of reducing the problem and combining the solutions of the subproblems is $f(n)$.
+
+    The time complexity of the recurrence is given as:
+    \startformula T(n) = aT\left(\frac{n}{b}\right) + f(n) \stopformula
+
+    Reducing the $T(n/b)$ term $log_{b}a$ times yields:
+    \startformula T(n) \approx n^{log_{b}a}T(1) + \sum_{i=0}^{\lfloor log_{b}n \rfloor - 1}a^{i}f\left(\frac{n}{b^{i}}\right) \stopformula
+
+    \subsubject{Master Theorem}
+
+        Master Theorem is used to find the time complexity of "typical" recurrence problems.
+
+        The critical polynomial is given as:
+        \startformula n^{c^{*}} = n^{log_{b}(a)} \stopformula
+
+        \startitemize[n]
+            \item If $f(n) = O(n^{c^{*} - \epsilon})$ for some $\epsilon > 0$, then $T(n) = \Theta(n^{c^{*}})$.
+            \item If $f(n) = \Theta(n^{c^{*}})$, then $T(n) = \Theta(n^{c^{*}}log(n))$.
+            \item If $f(n) = \Omega(n^{c^{*} + \epsilon})$ for some $\epsilon > 0$, and $af(n/b) \leq cf(n)$ holds for some $c < 1$ and holds $\forall$ $n > N$, then $T(n) = \Theta(f(n))$.
+            \item Otherwise, Master Theorem does not apply.
+        \stopitemize
+
+        The general method to using the Master Theorem is to identify $a$, $b$, and $f(n)$; determine the critical polynomial; and setting $\epsilon$ to be some appropriate value. The Theorem satisfaction criteria are thus:
+        \startitemize
+            \item If time complexity of $f(n)$ is less than time complexity of critical polynomial, then case 1 applies.
+            \item If time complexity of $f(n)$ is equal to time complexity of critical polynomial, then case 2 applies.
+            \item If time complexity of $f(n)$ is greater than time complexity of critical polynomial and satisfies the inequality, then case 3 applies.
+            \item If none of the above applies, then the time complexity of the recurrence must be determined by hand (evaluating the recurrance equation to get an expanded series then simplified).
+        \stopitemize
+
+\subject{Fast Fourier Transform} %TODO
+
+    Inverse discrete Fourier transform (IDFT) is a sequence of coefficients of a polynomial. Discrete Fourier transform (DFT) is a sequence of values of a polynomial at the root of unity of order $m$:
+    \startformula\eqalign{
+        \langle A_{0}, A_{1}, ..., A_{n}, \underbrace{0, ..., 0}_{n} \rangle \xrightarrow{\text{DFT}} \langle \hat{A}_{0}, \hat{A}_{1}, ..., \hat{A}_{m - 1} \rangle \cr
+        \langle B_{0}, B_{1}, ..., B_{n}, \underbrace{0, ..., 0}_{n} \rangle \xrightarrow{\text{DFT}} \langle \hat{B}_{0}, \hat{B}_{1}, ..., \hat{B}_{m - 1} \rangle \cr
+        \langle C_{0}, C_{1}, ..., C_{m - 1} \rangle \xleftarrow{\text{IDFT}} \langle \hat{C}_{0}, \hat{C}_{1}, ..., \hat{C}_{m - 1} \rangle
+    }\stopformula
+
+    Fast Fourier transform (FFT) is an algorithm used to compute the DFT or IDFT. It has a time complexity of $O(nlog(n))$.
+
+    Basically, to multiply a sequence of integers very quickly, use FFT.
+
+\subject{Greedy Algorithm}
+
+    Greedy algorithm solves a problem by dividing it into stages and considering the choice that is best at the time. It may not be clear if the locally optimal choice leads to a globally optimal solution. Therefore to prove correctness of our solution, consider two correctness proofs:
+
+    \subsubject{Greedy Stays Ahead}
+
+        Prove at every stage, there is no local solution better than our algorithm's local solution.
+
+        \startitemize[n]
+            \item Label our algorithm's partial solution, $A(1..k)$, and a general partial solution, $O(1..m)$.
+            \item Assume $O$ is not the same as $A$ e.g. $A$ is naturally ordered by greedy algorithm; but $O$ is optimally ordered (which optimises the measure).
+            \item Define a measure, $f(a_{1}..a_{j})$ and $f(o_{1}..o_{j})$, where greedy algorithm is ahead of $O$ e.g. $f$ is last completion of first $j$ elements; total weight of first $j$ elements; or largest index of first $j$ elements.
+            \item Define a goal to compare measures e.g. $f(a_{1}..a_{j}) \leq f(o_{1}..o_{j})$; or $f(a_{1}..a_{j}) \geq f(o_{1}..o_{j})$ $\forall$ $j \leq k$.
+            \item Prove the above goal by induction.
+            \item $A(1..j)$ stays ahead of $O(1..j)$ with respect to $f(1..j)$, therefore $A(1..j)$ is optimal.
+        \stopitemize
+
+    \subsubject{Exchange Argument}
+
+        Use a correct algorithm to the solution into our solution without making it worst than our solution.
+
+        \startitemize[n]
+            \item Label our algorithm's solution, $A$, and general solution, $O$.
+            \item Assume $O$ is not the same as $A$ e.g. there is an element of $O$ not in $A$ and an element of $A$ not in $O$; or there are 2 consecutive elements in $O$ in different order than in $A$ (inversion).
+            \item Explain how $A$ and $O$ can be different.
+            \item Swap elements in $O$ and argue that $O$ is no worse than $A$.
+            \item Argue that we can continue to swap and eliminate all differences between $O$ and $A$ without worsening $O$.
+            \item Therefore $A$ is just as good as $O$ and is therefore optimal itself.
+        \stopitemize
+
+\subject{Kruskal's Algorithm} %TODO
+
+    Outputs a minimum spanning tree (MST) for a time complexity of $O(|E|log(|V|))$.
+
+\subject{Dynamic Programming} %TODO
+
+    Dynamic programming solves a problem by recursively solving overlapping subproblems with optimal subsolutions which are combined into an optimal solution for the full problem. Dynamic programming problems consist of defining the subproblem, recurrence relation, and base cases. The general method to solving these problems is:
+    \startitemize[n]
+        \item For $1 \leq i \leq n$, let $P(i)$ be the problem of determining $opt(i)$.
+        \item Define $opt(i)$ in context to the problem.
+        \item Define the recurrence relation: $opt(i) = min/max(opt(?), opt(?))$.
+        \item Define base cases e.g. $opt(1) = ?$.
+        \item Identify the order of which subproblems should be solved if appropriate e.g. $i$ must be solved in descending order.
+        \item State the final solution e.g. $max_{1 \leq i \leq n}(opt(i))$.
+        \item Determine the time complexity e.g. there are $O(n)$ subproblems, each solved in $O(n)$ time, therefore the overall time complexity is $O(n^{2})$.
+    \stopitemize
+
+    It is possible to have multiple iterators, if more information needs to be passed recursively.
+
+\subject{Max Flow}
+
+    Max flow problems consist of a flow network construction then application of some max flow min cut algorithm.
+
+    \subsubject{Flow Network Construction}
+
+        Flow networks are directed graphs which have {\it capacity constraint} and {\it flow conservation}. To fully construct a flow network, do the following:
+
+        \startitemize[n]
+            \item Let there be a flow network represented as a directed graph.
+            \item Define the flow.
+            \item Define the nodes.
+            \item Define the node capacities.
+            \item Define the edges.
+            \item Define the edge capacities.
+            \item Define the source.
+            \item Define the sink.
+        \stopitemize
+
+    \subsubject{Max Flow Min Cut}
+
+        The max flow of a flow network is equal to the min cut's capacity (cutting across a set of edges which bisects the flow network). To find the max flow, do the following:
+
+        \startitemize[n]
+            \item Define the max flow, $f$.
+            \item Apply Ford-Fulkerson, $O(|E|f)$, or Edmonds-Karp, $O(min(|V||E|^{2}, |E|f))$, algorithm to compute $f$.
+            \item Explain how $f$ is used.
+        \stopitemize
+
+    \subsubject{Max Bipartite Matching}
+
+        Max bipartite matching problem can be identified from a flow network problem with two disjoint sets of nodes. Convert the max bipartite matching problem to a flow network problem by modifying the flow network construction with the following:
+        \startitemize[n]
+            \item Replace the source with a super-source which is an arbitrary coordinate to a set of nodes.
+            \item Define the capacity of edges to super-source.
+            \item Replace the sink with a super-sink which is an arbitrary coordinate to a set of nodes.
+            \item Define the capacity of edges to super-sink.
+        \stopitemize
+
+        Typically, capacities of edges to super-sources and super-sinks are $1$.
+
+        The time complexities for both Ford-Fulkerson and Edmonds-Karp are $O(|E||V|)$.
+
+\subject{String Matching} %TODO
+
+    String matching is determining if string, $A$, has a contiguous substring, $B$.
+
+    \subsubject{Rabin-Karp Algorithm}
+
+        
+
+\subject{Linear Programming} %TODO
+
+\subject{Intractability} %TODO

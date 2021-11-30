@@ -1,0 +1,45 @@
+\usemodule[m-ass1]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 4 by Dan Nguyen (z5206032)}
+
+    Let a series of ants on a line have positions $x_{-n}, x_{-n+1}, ..., x_{k}, ..., x_{n-1}, x_{n}$, where $x_{-n} < x_{-n+1} < ... < x_{k} < ... < x_{n-1} < x_{n}$, and $x_{k} \in \mathbb{R}[-n, n]$. Let the series be $X$ where its size is $2n+1$.
+
+    Food is placed on the same line at a position $x$ (where $x \in \mathbb{R}$) which minimises the total distance, $D$, that all ants along the line must travel to reach the food where the total distance is:
+    \placeformula[eqn:total_distance]
+    \startformula
+        D(x) = \sum_{k=-n}^{n}|x - x_{k}|
+    \stopformula
+
+    Let $x_{i} \leq x \leq x_{i+1}$. Thus Equation \in[eqn:total_distance] can be represented as:
+    \placeformula[eqn:total_distance_split]
+    \startformula
+        D(x) = \sum_{k=-n}^{i}(x - x_{k}) + \sum_{k=i + 1}^{n}(x_{k} - x)
+    \stopformula
+
+    Let $x = x + c$ into Equation \in[eqn:total_distance_split]:
+    \startformula\eqalign{
+        D(x + c) = \sum_{k=-n}^{i}((x + c) - x_{k}) + \sum_{k=i + 1}^{n}(x_{k} - (x + c)) \cr
+        = \sum_{k=-n}^{i}(x - x_{k}) + \sum_{k=-n}^{i} c + \sum_{k=i + 1}^{n}(x_{k} - x) - \sum_{k=i + 1}^{n}c \cr
+        = \sum_{k=-n}^{i}(x - x_{k}) + (n+i)c + \sum_{k=i + 1}^{n}(x_{k} - x) - (n-i)c \cr
+        D(x + c) = 2cn + D(x)
+    }\stopformula
+    \placeformula[eqn:total_distance_final]
+    \startformula
+        \therefore D(x + c) - D(x) = ci
+    \stopformula
+
+    It can be seen from Equation \in[eqn:total_distance_final] that:
+    \startformula\eqalign{
+        D(x + c) - D(x) < 0 \text{\;for } i < 0 \cr
+        D(x + c) - D(x) = 0 \text{\;for } i = 0 \cr
+        D(x + c) - D(x) > 0 \text{\;for } i > 0 \cr
+    }\stopformula
+
+    Therefore the total distance, $D$, is minimised when $i = 0$ i.e. when $i$ is indexed at the median of $X$ or $x_{0}$.
+
+    $x$ is therefore the median, $x_{0}$, of all ants along the line.
+
+\stoptext

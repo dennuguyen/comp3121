@@ -1,0 +1,29 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 5 by Dan Nguyen (z5206032)}
+
+    Let there be a flow network represented as a directed graph with the following properties:
+    \startitemize[nowhite, after]
+        \item the flow is the number of items in a warehouse or delivery;
+        \item nodes are warehouses on a particular day i.e. the network can be represented by a $d$ by $n$ matrix with coordinates: $\{ (D, w_{i}) \; | \; 1 \leq D < d$ $\bigcap$ $1 \leq i \leq n \}$;
+        \item warehouses have infinite item capacity;
+        \item warehouses have self-delivery of infinite capacity on consecutive days (overnight-storage) i.e. an edge $\exists$ for $\{ (Dw_{i}, (D + 1)w_{i}) \; | \; 1 \leq D < d$ $\bigcap$ $1 \leq i \leq n \}$.
+        \item edges exists for each delivery $k$ which departs node $(t_{k}, w_{k})$ and arrives at node $(t_{k}^{I}, w_{k}^{I})$, and has an item capacity, $c_{k}$;
+        \item the super-source is an arbitrary node with edges to all warehouses on the first day where each edge has a capacity, $\{A_{i} \; | \; 1 \leq i \leq n \}$; and
+        \item the super-sink is an arbitrary node with edges to all warehouses on the last day where each edge has a capacity, $\{B_{i} \; | \; 1 \leq i \leq n \}$.
+    \stopitemize
+
+    Let the max flow, $f$, be the max number of items in a warehouse or delivery i.e. $f$ is at most $\sum_{i}A_{i}$.
+
+    There are at most $E = k + (d - 1)n$ edges.
+
+    There are at most $V = dn$ nodes.
+
+    Apply the Edmonds-Karp algorithm to the flow network which will have a time complexity of $O(\text{min}(|V||E|^{2}, \; |E|f)) = O(\text{min}(dn \cdot (k + (d - 1)n)^{2}, \; (k + (d - 1)n) \sum_{i}A_{i}))$.
+
+    If all edges connected to the super-sink is at max capacity, then it can be determined that it is possible to have at least $B_{i}$ items present at each warehouse $i$ at the end of day $d$.
+
+\stoptext

@@ -1,0 +1,40 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    An array, $A$, of size $n$ has distinct positive integers smaller than $m$ i.e. $0 < A[i] < m$.
+
+    Suppose $i$ and $j$ are valid indices of some array. The smallest absolute difference between any two integers of the array, $|A[i] - A[j]|$, is the {\it separation} of that array.
+
+    Let there be an integer, $l$, which tracks the potential largest possible {\it separation}.
+
+    Let there be a {\it separation} threshold, $s \in \mathbb{Z}[1, m]$, with an initial value of $1$ which acts as a minimum bound for searching for {\it separations} of $A$.
+
+    Let there be another array, $K$, of a given size, $k$ $\in$ $\mathbb{Z}[2, n]$, which is a subset of $A$ with the largest possible {\it separation}.
+
+    Let there be an ordered hashmap, $M$, whose key stores an absolute difference, $d = |A[i] - A[j]|$, and whose value stores the pair of integers used to compute $d$, $p = \{A[i], A[j]\}$.
+
+    Merge-sort $A$ for a time complexity of $O(nlog(n))$ so that $A[0] < A[1] < ... < A[n]$.
+
+    Iterating over $A$, compute $d$ from adjacent elements i.e. $|A[i] - A[i + 1]|$ for $1 \leq i < n$ and insert it into $M$. $M$ should have a size of $(n - 1)$.
+
+    Using a modified sliding window algorithm over only the first $(n - 1)$ elements of $M$ which has an expected time complexity $O(n - 1) \leq O(n)$. Let the sliding window, $W$, have a fixed capacity, $k$.
+
+    Consider the sum of each number in $W$: the computed sum is equivalent to the absolute difference of the minimum and maximum integers of the set of integers used to compute each $d$ in $W$ i.e.:
+    \startformula d = \sum_{i = 1}^{n - 1} W[i] \stopformula
+    \startformula p = \{\text{min}(W[1]), \text{max}(W[n - 1])\} \stopformula
+
+    The minimum integer can be obtained through looking up the first element of $W$ in $M$ and finding the minimum of the pair of integers. The maximum integer can be obtained through looking up the last element of $W$ in $M$ and finding the maximum of the pair of integers. The lookup and comparison operations each have an expected time complexity of $O(1)$.
+
+    Therefore, the sum and pair of (minimum and maximum) integers are inserted into $M$ for an expected time complexity of $O(1)$. The computation of the sum will have an expected time complexity of $O(c) \leq O(n)$.
+
+    If $M$ has been screened for the first $(n - 1)$ values and $K$ has not been found then  and re-screen the first $(n-1)$ values of $M$ until $s > m$. This will have an expected time complexity of $O(log(m))$.
+    
+    Increase $s$ using bisection method until $l$ does not change which means the largest possible {\it separation} has been found or until 
+
+    Therefore, the final expected time complexity is $O(nlog(m))$ as required.
+
+\stoptext

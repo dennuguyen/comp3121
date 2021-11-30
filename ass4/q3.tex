@@ -1,0 +1,27 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    Let there be a flow network represented as a directed graph with the following properties:
+    \startitemize[nowhite, after]
+        \item the flow is the number of spies moving to a stronghold;
+        \item nodes are either a spy or stronghold coordinate i.e. $\{(x_{i}, y_{j}) \; | \; 1 \leq x, y \leq n\}$ and $\{(a_{i}, b_{j}) \; | \; 1 \leq i, j \leq m\}$ respectively;
+        \item edges connect spies to strongholds i.e. an edge $\exists$ if $\sqrt{(x_{i} - a_{j})^{2} + (y_{i} - b_{j})^{2}} \leq v_{i} \cdot T$; and
+        \item strongholds have a capacity of $1$.
+    \stopitemize
+
+    At this point of construction, it is recognised that the flow network is a {\it max bipartite matching} problem since spies and strongholds can be divided into two disjoint sets. Therefore, to convert the problem into a {\it max flow} problem, consider the additional properties for the flow network:
+    \startitemize[nowhite, after]
+        \item the super-source is an arbitrary coordinate with an edge to all spies;
+        \item the super-sink is an arbitrary coordinate with an edge to all strongholds; and
+        \item assign all edges in the flow network, a capacity of $1$.
+    \stopitemize
+
+    Let the max flow, $f$, be the max number of spies that can move from their original coordinate to a stronghold i.e. $f$ is at most $n$.
+
+    To find $f$, apply the Edmonds-Karp algorithm to the flow network which will have a time complexity (for a {\it max bipartite matching} problem) of $O(|E||V|) = O(mn^{2})$.
+
+\stoptext

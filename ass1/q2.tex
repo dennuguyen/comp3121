@@ -1,0 +1,22 @@
+\usemodule[m-ass1]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 2 by Dan Nguyen (z5206032)}
+
+    An array, $A$, of size $n$ has only positive integers i.e. $A[i] > 0$ for $i \in \mathbb{Z}$. An integer, $m$, is also given where $m \leq n$.
+
+    The {\it beauty} of an array is the least occurrence of any array element in the range $1$ to $m$ inclusive.
+
+    Consider the index, $i$, which has the range from $1$ to $n$ inclusive. This index will be used to iterate over $A$.
+
+    An index, $i$, is {\it fulfilling} if a subarray of $A$ i.e. $A[1..i]$ has strictly greater beauty than $A[1..i-1]$.
+
+    Let there be an array, $B$, of size $n$ and zero-initialised. $B$ will be used to keep track of the number of occurrences of elements of $A$.
+
+    For each $i$ in $A$, keep a running minimum of occurrences. If the running minimum gets incremented, index $i$ is {\it fulfilling}. This has the expected time-complexity of $O(n)$.
+
+    % A possible $O(1)$ implementation of keeping a running minimum of occurrences is to store the running minimum in a variable, $min$, that is initially zero. $min$ is compared for every increment of any element, $potential_min$, of array, $B$. If the potential minimum 
+
+\stoptext

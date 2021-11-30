@@ -1,0 +1,65 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    % \subsubject{Recurrence}
+
+    % Using recurrence to solve a problem of size $n$ reduces the problem to $a$ many subproblems of a smaller size $n/b$. The overhead cost of reducing the problem and combining the solutions of the subproblems is $f(n)$.
+
+    % The time complexity of the recurrence is given as:
+    % \placeformula[eqn:general_recurrence]
+    % \startformula T(n) = aT\left(\frac{n}{b}\right) + f(n) \stopformula
+
+    % Reducing the $T(n/b)$ term $log_{b}a$ times yields:
+    % \placeformula[eqn:general_recurrence_reduced]
+    % \startformula T(n) \approx n^{log_{b}a}T(1) + \sum_{i=0}^{\lfloor log_{b}n \rfloor - 1}a^{i}f\left(\frac{n}{b^{i}}\right) \stopformula
+
+    % \subsubject{Master Theorem}
+
+    % The critical polynomial is given as:
+    % \placeformula[eqn:general_critical_polynomial]
+    % \startformula n^{c^{*}} = n^{log_{b}(a)} \stopformula
+
+    % \startitemize[n]
+    %     \item If $f(n) = O(n^{c^{*} - \epsilon})$ for some $\epsilon > 0$, then $T(n) = \Theta(n^{c^{*}})$.
+    %     \item If $f(n) = \Theta(n^{c^{*}})$, then $T(n) = \Theta(n^{c^{*}}log(n))$.
+    %     \item If $f(n) = \Omega(n^{c^{*} + \epsilon})$ for some $\epsilon > 0$, and for some $c < 1$ and some $n_0$, $af(n/b) \leq cf(n)$ holds $\forall$ $n > n_{0}$, then $T(n) = \Theta(f(n))$.
+    %     \item Otherwise, Master Theorem does not apply.
+    % \stopitemize
+
+    % \subsubject{Solution}
+
+    An array, $A$, of size $n$ has distinct positive integers smaller than $m$ i.e. $0 < A[i] < m$.
+
+    Suppose $i$ and $j$ are valid indices of some array. The smallest absolute difference between any two integers of the array, $|A[i] - A[j]|$, is the {\it separation} of that array.
+
+    Merge-sort $A$ for a time complexity of $O(nlog(n))$ so that $A[0] < A[1] < ... < A[n]$.
+
+    Let there be an array, $D$, with size $n - 1$, which stores adjacent {\it separations} of {\bf sorted} $A$ i.e.:
+    \placeformula[eqn:D_abs_diff]
+    \startformula D[i] = |A[i] - A[i + 1]| \stopformula
+    Pre-processing $A$ to fill $D$ will have an expected time complexity of $O(n - 1) \leq O(n)$.
+
+    Let there be a {\it separation} threshold, $s \in \mathbb{Z}[1, m]$, with an initial value of $1$ which acts as a minimum bound for searching for adjacent {\it separations} of $A$.
+
+    Let there be a sum, $S$, which summates the differences encountered in $D$ and has an initial value of $0$.
+
+    Let there be a set, $L$, with capacity $n$, which is a subset of $A$ with the largest possible {\it separation}. Let there be an $L$ size counter, $l$ $\in$ $\mathbb{Z}[2, n]$.
+
+    There is a given integer, $k$ $\in$ $\mathbb{Z}[2, n]$, which is the desired length of $L$.
+
+    For each iterator, $i$, in $D$, add $D[i]$ to $S$, and if $S$ is at least $s$ then insert $A[i + 1]$ into $L$, increment $l$, then reset $S$. This will have an expected time complexity of $O(n - 1) \leq O(n)$.
+
+    If $L$ has a size $l > k$, then there is a valid set of $k$ integers which has a {\it separation} of at least $s$. $s$ is increased using the bisection method i.e. $s$ is increased by $s + (m - s)/2$ until $l \leq k$.
+    
+    If $L$ has a size $l < k$, then there is no valid set of $k$ integers which has a {\it separation} of at least $s$. $s$ is decreased using the bisection method i.e. $s$ is decreased by $s/2$ until $l \geq k$.
+
+    $D$ is iterated over again with the new {\it separation} threshold until $s$ cannot be increased or decreased anymore which by then $L$ will have exactly $k$ integers with the largest {\it separation}. This has an expected time complexity of $O(log(m))$.
+
+    If $L$ has a size $l = k$, then there is exactly $k$ integers which has a {\it separation} of at least $s$. $L$ can be immediately returned as increasing $s$ will only remove elements from $L$ and there is no need to iterate over $D$ again.
+
+    Therefore, the final expected time complexity is $O(nlog(m))$ as required.
+\stoptext

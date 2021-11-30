@@ -1,0 +1,57 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    \subsubject{Recurrence}
+
+    Using recurrence to solve a problem of size $n$ reduces the problem to $a$ many subproblems of a smaller size $n/b$. The overhead cost of reducing the problem and combining the solutions of the subproblems is $f(n)$.
+
+    The time complexity of the recurrence is given as:
+    \placeformula[eqn:general_recurrence]
+    \startformula T(n) = aT\left(\frac{n}{b}\right) + f(n) \stopformula
+
+    Reducing the $T(n/b)$ term $log_{b}a$ times yields:
+    \placeformula[eqn:general_recurrence_reduced]
+    \startformula T(n) \approx n^{log_{b}a}T(1) + \sum_{i=0}^{\lfloor log_{b}n \rfloor - 1}a^{i}f\left(\frac{n}{b^{i}}\right) \stopformula
+
+    \subsubject{Master Theorem}
+
+    The critical polynomial is given as:
+    \placeformula[eqn:general_critical_polynomial]
+    \startformula n^{c^{*}} = n^{log_{b}(a)} \stopformula
+
+    \startitemize[n]
+        \item If $f(n) = O(n^{c^{*} - \epsilon})$ for some $\epsilon > 0$, then $T(n) = \Theta(n^{c^{*}})$.
+        \item If $f(n) = \Theta(n^{c^{*}})$, then $T(n) = \Theta(n^{c^{*}}log(n))$.
+        \item If $f(n) = \Omega(n^{c^{*} + \epsilon})$ for some $\epsilon > 0$, and for some $c < 1$ and some $n_0$, $af(n/b) \leq cf(n)$ holds $\forall$ $n > n_{0}$, then $T(n) = \Theta(f(n))$.
+        \item Otherwise, Master Theorem does not apply.
+    \stopitemize
+
+    \subsubject{Solution}
+
+    An array, $A$, of size $n$ has distinct positive integers smaller than $m$ i.e. $0 < A[i] < m$.
+
+    Suppose $i$ and $j$ are valid indices of some array. The smallest absolute difference between any two integers of the array, $|A[i] - A[j]|$, is the {\it separation} of that array.
+
+    Let there be an integer, $l$, which tracks the potential largest possible {\it separation}.
+
+    Let there be a {\it separation} threshold, $s \in \mathbb{Z}[1, m]$, with an initial value of $1$ which acts as a minimum bound for searching for {\it separations} of $A$.
+
+    Let there be another array, $K$, of a given size, $k$ $\in$ $\mathbb{Z}[2, n]$, which is a subset of $A$ with the largest possible {\it separation}.
+
+    Merge-sort $A$ for a time complexity of $O(nlog(n))$ so that $A[0] < A[1] < ... < A[n]$.
+
+    Using divide-and-conquer, divide $A$ into {\bf evenly-sized} $k - 1$ sub-arrays i.e. $k - 1$ subproblems each of size $n/(k - 1)$ e.g. for $k = 3$:
+    \startformula A = \{A_{1}, A_{2}\} \stopformula
+    \startformula A_{1} \in \left[1, \frac{A[1] + A[n]}{2} \right], A_{2} \in \left(\frac{A[1] + A[n]}{2}, n \right] \stopformula
+
+    
+
+    Increase $s$ using bisection method until $l$ does not change which means the largest possible {\it separation} has been found or until 
+
+    Therefore, the final expected time complexity is $O(nlog(m))$ as required.
+
+\stoptext

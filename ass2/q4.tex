@@ -1,0 +1,81 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 4 by Dan Nguyen (z5206032)}
+
+    \subsubject{Recurrence}
+
+    Using recurrence to solve a problem of size $n$ reduces the problem to $a$ many subproblems of a smaller size $n/b$. The overhead cost of reducing the problem and combining the solutions of the subproblems is $f(n)$.
+
+    The time complexity of the recurrence is given as:
+    \placeformula[eqn:general_recurrence]
+    \startformula T(n) = aT\left(\frac{n}{b}\right) + f(n) \stopformula
+
+    Reducing the $T(n/b)$ term $log_{b}a$ times yields:
+    \placeformula[eqn:general_recurrence_reduced]
+    \startformula T(n) \approx n^{log_{b}a}T(1) + \sum_{i=0}^{\lfloor log_{b}n \rfloor - 1}a^{i}f\left(\frac{n}{b^{i}}\right) \stopformula
+
+    % \subsubject{Master Theorem}
+
+    % The critical polynomial is given as:
+    % \placeformula[eqn:general_critical_polynomial]
+    % \startformula n^{c^{*}} = n^{log_{b}(a)} \stopformula
+
+    % \startitemize[n]
+    %     \item If $f(n) = O(n^{c^{*} - \epsilon})$ for some $\epsilon > 0$, then $T(n) = \Theta(n^{c^{*}})$.
+    %     \item If $f(n) = \Theta(n^{c^{*}})$, then $T(n) = \Theta(n^{c^{*}}log(n))$.
+    %     \item If $f(n) = \Omega(n^{c^{*} + \epsilon})$ for some $\epsilon > 0$, and for some $c < 1$ and some $n_0$, $af(n/b) \leq cf(n)$ holds $\forall$ $n > n_{0}$, then $T(n) = \Theta(f(n))$.
+    %     \item Otherwise, Master Theorem does not apply.
+    % \stopitemize
+
+    \subsubject{Solution}
+
+    There is a given set of real numbers, $S = \{t_{1}, t_{2}, ..., t_{n}\}$ of size $n$.
+
+    There is a given polynomial, $P$ of degree $n$ and leading coefficient $1$, with unknown coefficients:
+    \placeformula[eqn:q4_P]
+    \startformula P(x) = x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{2}x^{2} + a_{1}x + a_{0} \stopformula
+
+    such that for each element of $S$ inputted into $P$, the outputs are equivalent:
+    \placeformula[eqn:condition]
+    \startformula P(t_{1}) = P(t_{2}) = ... = P(t_{n}) \stopformula
+
+    Consider Equation \in[eqn:q4_P] in factored form which satisfies Equation \in[eqn:condition]:
+    \placeformula[eqn:q4_P_factored]
+    \startformula P(x) = (x - t_{1})(x - t_{2})...(x - t_{n}) \stopformula
+
+    Using divide-and-conquer, split Equation \in[eqn:q4_P_factored] into two subpolynomials i.e. two subproblems each of size $n/2$:
+    \startformula P(x) = P_{1}(x) \cdot P_{2}(x) \stopformula
+
+    such that:
+    \placeformula[eqn:q4_P1]
+    \startformula P_{1}(x) = (x - t_{1})(x - t_{2})...(x - t_{n/2}) \stopformula
+
+    \placeformula[eqn:q4_P2]
+    \startformula P_{2}(x) = (x - t_{n/2 + 1})(x - t_{n/2 + 2})...(x - t_{n}) \stopformula
+
+    The division of polynomials into two subpolynomials has a time complexity of $O(1)$. The coefficients of $P$ can be computed through the polynomial multiplication of $P_{1}$ and $P_{2}$ in the expanded form (if the coefficients of the subpolynomials are known) using the Fast Fourier Transform (FFT) for a time complexity of $O(nlog(n))$.
+    
+    The coefficients of $P_{1}$ and $P_{2}$ are found recursively using the same divide-and-conquer algorithm. The smallest subproblem of the divide-and-conquer algorithm has the form: $(x - t_{k})(x - t_{k + 1})$. A simple multiplication and addition of the roots (which are atomic operations) yields a degree $2$ polynomial with known coefficients of the form: $x^{2} - (t_{k} + t_{k + 1})x + t_{k}t_{k + 1}$. The expanded polynomial is used to compute the FFT.
+
+    Therefore, the recurrence is:
+    \placeformula[eqn:q4_T]
+    \startformula T(n) = 2T\left(\frac{n}{2}\right) + nlog(n) \stopformula
+
+    Using the alternative form of the recurrence (from Equation \in[eqn:general_recurrence_reduced]) yields:
+    \startformula\eqalign{
+        T(n) \approx nT(1) + \sum_{i=0}^{\lfloor log_{2}n \rfloor - 1}2^{i}f\left(\frac{n}{2^{i}}\right) \cr
+        = f\left(n\right) + 2f\left(\frac{n}{2}\right) + 4f\left(\frac{n}{4}\right) + ... + \frac{n}{2} f\left(\frac{n}{n/2}\right) \cr
+        = nlog_{2}(n) + nlog_{2}\left(\frac{n}{2}\right) + nlog_{2}\left(\frac{n}{4}\right) + ... + nlog_{2}\left(\frac{n}{n/2}\right) \cr
+        = n\left(log_{2}\left(\frac{n}{1} \times \frac{n}{2} \times \frac{n}{4} \times ... \times \frac{n}{n/2}\right)\right) \cr
+        = n\left(log_{2}\left(\frac{n^{log_{2}n}}{n^{\frac{log_{2}(n)}{2}}}\right)\right) \cr
+        = n\left(log_{2}\left(n^{log_{2}n}\right) - log_{2}\left(n^{\frac{log_{2}(n)}{2}}\right)\right) \cr
+        = nlog_{2}(n)log_{2}(n) - \frac{n}{2}log_{2}\left(\frac{n}{2}\right)log_{2}(n) \cr
+        \in O(nlog_{2}^{2}(n)) \cr
+    }\stopformula
+
+Therefore, the recurrence algorithm has a time complexity of $O(nlog_{2}^{2}(n))$ as required.
+
+\stoptext

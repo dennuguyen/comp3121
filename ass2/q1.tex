@@ -1,0 +1,21 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 1 by Dan Nguyen (z5206032)}
+
+    There is $n$ given stacks of blocks, $S$, where the $i$th stack contains $h_{i} > 0$ blocks i.e. stacks cannot be empty. The height of each stack is also given. Blocks can only be moved from the $i$th stack to the $(i + 1)$th stack.
+
+    Suppose that a set of stacks, $T$, has strictly increasing stack heights i.e. stack $1$ has a stack height of $1$, stack $2$ has a stack height of $2$, and so on:
+    \startformula T = (1, 2, 3, ..., n - 2, n - 1, k), k \geq n \stopformula
+
+    To rearrange $S$ into $T$, for each stack in $S$, starting at the $1$st stack and up to the $n$th stack: ensure the $i$th stack has exactly $i$ blocks. If the $i$th stack has more than $i$ blocks, then move the excess blocks to the $(i + 1)$th stack.
+
+    If the $i$th stack has less than $i$ blocks or the $(i + 1)$th stack has less than $(i + 1)$ blocks then it's not possible to have strictly increasing stack heights.
+
+    Counting the stack height (and thus moving blocks between stacks) has a time complexity of $O(1)$ since it is a given input.
+
+    Iterating through each stack has a time complexity of $O(n)$ as required.
+
+\stoptext

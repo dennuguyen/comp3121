@@ -1,0 +1,23 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 2 by Dan Nguyen (z5206032)}
+
+    Let there be a flow network represented as a directed graph with the following properties:
+    \startitemize[nowhite, after]
+        \item the flow is the number of lizards jumping;
+        \item nodes are stones with a height, $h_{ij}$, and number of lizards, $a_{ij}$, where there are $rc$ stones;
+        \item edges are jumps between stones i.e. an edge $\exists$ if $\sqrt{(i_{1} - i_{2})^{2} + (j_{1} - j_{2})^{2}} \leq d$;
+        \item stones have infinite lizard capacity;
+        \item jumps have a capacity equivalent to the height of the stone being jumped from - each lizard jump decrements $h_{ij}$ and $a_{ij}$, where if $h_{ij}$ decrements to zero, $a_{ij} = 0$;
+        \item the source is any stone with some initial number of lizards on it i.e. $a_{ij} > 0$; and
+        \item the sink is any stone outside the grid i.e. $\{i \leq 0 \bigcap i > r\}$ $\bigcap$ $\{j \leq 0 \bigcap j > c\}$.
+    \stopitemize
+
+    Let the max flow, $f$, be the max number of lizards that can move from any source to any sink i.e. $f$ is at most $\sum_{i, j}a_{ij}$.
+
+    To find $f$, apply the Edmonds-Karp algorithm to the flow network which will have a time complexity of $O(\text{min}(|V||E|^{2}, \; |E|f)) = O(\text{min}((rc)^{3}, \; rc \sum_{i, j}a_{ij}))$.
+
+\stoptext

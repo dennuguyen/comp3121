@@ -1,0 +1,38 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    Given a positive integer, $n$.
+
+    Given a decimal digit, $k$.
+
+    Let there be a set, $S_{i}$, of all $i$-digit integers of $\mathbb{N}$. The size of $S_{i}$ is $10^{i} - 10^{i - 1}$.
+
+    Consider the case where $k$ appears an odd number of times.
+
+    Define $P(i)$ as the problem of $k$ appearing an odd number of times in $S_{i}$ where $p(i)$ as the solution to $P(i)$.
+
+    Define $Q(i)$ as the problem of $k$ appearing an even number of times in $S_{i}$ where $q(i)$ as the solution to $Q(i)$.
+
+    For each $1 \leq i \leq n$, solve for $P(i)$ and $Q(i)$ using dynamic programming where the recurrences are respectively:
+    \startformula p(i) = 9 \times p(i - 1) + q(i - 1) \stopformula
+    \startformula q(i) = 9 \times q(i - 1) + p(i - 1) \stopformula
+
+    The base cases for $k = 0$ are:
+    \startformula p(1) = 0 ,\; q(1) = 9 \stopformula
+
+    The base cases for $k > 0$ are:
+    \startformula p(1) = 1 ,\; q(1) = 8 \stopformula
+
+    The final answers for $P$ and $Q$ respectively are:
+    \startformula p(n) = 9 \times p(n - 1) + q(n - 1) \stopformula
+    \startformula q(n) = 9 \times q(n - 1) + p(n - 1) \stopformula
+
+    The order of solving $P$ and $Q$ are important i.e. subproblems with lesser $i$ must be solved first.
+
+    There are $n$ subproblems which are solved in $O(n)$. The time complexity of solving each subproblem is constant. Therefore, the overall time complexity is $O(n)$ as required.
+
+\stoptext

@@ -1,0 +1,25 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 1 by Dan Nguyen (z5206032)}
+
+    Let there be a flow network represented as a directed graph with the following properties:
+    \startitemize[nowhite, after]
+        \item the flow is the number of students in a corridor, $f_{i}$, where the total number of students is $x$;
+        \item nodes are rooms where there are $n$ rooms;
+        \item edges are corridors where there are $m$ corridors and $m \geq n - 1$;
+        \item rooms have infinite student capacity;
+        \item corridors have a student capacity, $l_{i}$;
+        \item the source is room $1$; and
+        \item the sink is room $n$.
+    \stopitemize
+
+    Let the max flow, $f$, be the max number of students that can move from room $1$ to room $n$ at once i.e. $f$ is at most $\sum_{i = 1}^{m}l_{i}$.
+
+    To find $f$, apply the Edmonds-Karp algorithm to the flow network which will have a time complexity of $O(\text{min}(|V||E|^{2}, \; |E|f)) = O(\text{min}(n(n-1)^{2}, \; (n - 1) \sum_{i = 1}^{m}l_{i}))$.
+
+    The minimum number of waves can therefore be determined by $\lceil x / f \rceil$.
+
+\stoptext

@@ -1,0 +1,22 @@
+\usemodule[m-ass1]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 3 by Dan Nguyen (z5206032)}
+
+    A string, $S$, of size $n$ is constructed from an alphabet, $A$, of size $k$. $S$ has all $k$ characters of the alphabet appear at least once.
+
+    Let $s$ be the {\it substring} of $S$ which is a contiguous sequence of characters within $S$.
+
+    Use a modified sliding window algorithm which has an expected time-complexity $O(n)$.
+
+    Let there be a variable, $U$, to keep count of unique characters, and is initially zero.
+
+    Let the sliding window, $W$, have a capacity, $m$, with an initial size, $k$. For each character, $c$, in $W$, if $c$ has not been encountered before in $W$, increment $U$. This will have an expected time-complexity of $O(m) \leq O(n)$.
+
+    When $U$ is equal to $k$, then $W$ will contain all $k$ unique characters and the length of the shortest {\it substring} is $m$.
+
+    If $S$ has been completely screened, and $U$ is not equal to $k$, then increment the capacity of $W$, and re-screen $S$ until $m > n$. This will have an expected time-complexity of $O(n - m) \leq O(n)$. Therefore, giving a final expected time-complexity of $O(n)$.
+
+\stoptext

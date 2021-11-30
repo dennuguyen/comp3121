@@ -1,0 +1,285 @@
+\usemodule[m-ass1]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 5 by Dan Nguyen (z5206032)}
+
+    Consider the following theorems.
+
+    Thereom 1 -- Big O Notation:
+    \startalignment[middle]
+    $f(n) = O(g(n))$ if $\exists$ $C, N > 0$
+    such that $0 \leq f(n) \leq Cg(n)$ $\forall$ $n \geq N $
+    \stopalignment
+
+    Thereom 2 -- Big $\Omega$ Notation:
+    \startalignment[middle]
+    $f(n) = \Omega(g(n))$ if $\exists$ $c, N > 0$
+    such that $0 \leq cg(n) \leq f(n)$ $\forall$ $n \geq N$
+    \stopalignment
+
+    Thereom 3 -- $\Theta$ Notation:
+    \startalignment[middle]
+    $f(n) = \Theta(g(n))$ $\iff$ $f(n) = O(g(n))$ and $f(n) = \Omega(g(n))$
+    \stopalignment
+
+    The general method to showing that a given $f(n)$ and $g(n)$ satisfies the above Theorems, is to rearrange the inequality with $f(n)/g(n)$ or $g(n)/f(n)$ in the middle of the inequality so it is bounded by zero on the left-hand side and some constant on the right-hand side. The Theorem satisfaction criteria are thus:
+    \startitemize
+        \item If $f(n)/g(n)$ converges, then it will satisfy Theorem 1. It can be said that $f(n)$ does not grow faster than $g(n)$.
+        \item If $f(n)/g(n)$ does not converge, then it is divergent and does not satisfy Theorem 1. There is no need to check the type of divergence.
+        \item If $g(n)/f(n)$ converges, then it will satisfy Theorem 2. It can be said that $f(n)$ does not grow slower than $g(n)$.
+        \item If $g(n)/f(n)$ does not converge, then it is divergent and does not satisfy Theorem 2. There is no need to check the type of divergence.
+    \stopitemize
+     
+
+\subsubject{Part A}
+
+    The following pair of equations is given:
+    \placeformula[eqn:q5_pA_fn]
+    \startformula f(n) = n^{1+log(n)} \stopformula
+
+    \placeformula[eqn:q5_pA_gn]
+    \startformula g(n) = nlog(n) \stopformula
+
+\subsubsubject{Theorem 1}
+
+    Substituting Equations \in[eqn:q5_pA_fn] and \in[eqn:q5_pA_gn] into the Theorem 1 inequality yields:
+    \placeformula[eqn:q5_pA_cI_inequality]
+    \startformula
+    0 \leq n^{1 + log(n)} \leq C n log(n)
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pA_cI_inequality] yields:
+    \placeformula[eqn:q5_pA_cI_inequality_rearranged]
+    \startformula 0 \leq \frac{n^{log(n)}}{log(n)} \leq C \stopformula
+
+    Equations \in[eqn:q5_pA_fn] and \in[eqn:q5_pA_gn] satisfies Theorem 1 if:
+    \placeformula[eqn:q5_pA_cI_limit]
+    \startformula
+    \lim_{n \rightarrow \infty} \frac{n^{log(n)}}{log(n)} = L, L \in [0, C]
+    \stopformula
+
+    Check if $f(n)/g(n)$ has an indeterminate form by considering the limits of $n$ to infinity of the numerator and denominator, respectively:
+    \startformula\eqalign{
+        \lim_{n \rightarrow \infty} n^{log(n)} \rightarrow \infty \cr
+        \lim_{n \rightarrow \infty} log(n) \rightarrow \infty
+    }\stopformula
+
+    Since both limits approach infinity, $f(n)/g(n)$ is an indeterminate form and L'H\^{o}pital's rule can be applied to solve Equation \in[eqn:q5_pA_cI_limit]:
+    \startformula\eqalign{
+        \lim_{n \rightarrow \infty} \frac{n^{log(n)}}{log(n)}
+        = \lim_{n \rightarrow \infty} \frac{2n^{log(n)-1}log(n)}{\frac{1}{n}}
+        = \lim_{n \rightarrow \infty} 2n^{log(n)}log(n)
+        \rightarrow \infty
+    }\stopformula
+
+    Since the limit, $L$, approaches infinity, it can be said that $f(n)$ grows asymptotically faster than $g(n)$. Therefore, $f(n) \nin O(g(n))$.
+
+\subsubsubject{Theorem 2}
+
+    Substituting Equations \in[eqn:q5_pA_fn] and \in[eqn:q5_pA_gn] into the Theorem 2 inequality yields:
+    \placeformula[eqn:q5_pA_cII_inequality]
+    \startformula
+    0 \leq c n log(n) \leq n^{1 + log(n)}
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pA_cII_inequality] yields:
+    \placeformula[eqn:q5_pA_cII_inequality_rearranged]
+    \startformula
+    0 \leq \frac{log(n)}{n^{log(n)}} \leq \frac{1}{c}
+    \stopformula
+
+    Equations \in[eqn:q5_pA_fn] and \in[eqn:q5_pA_gn] satisfies Theorem 2 if:
+    \placeformula[eqn:q5_pA_cII_limit]
+    \startformula
+    \lim_{n \rightarrow \infty} \frac{log(n)}{n^{log(n)}} = L, L \in [0, \frac{1}{c}]
+    \stopformula
+
+    From checking the limits of the numerator and denominator of $f(n)/g(n)$, $g(n)/f(n)$ is known to be an indeterminate form. Applying L'H\^{o}pital's rule to solve Equation \in[eqn:q5_pA_cII_limit]:
+    \startformula\eqalign{
+        \lim_{n \rightarrow \infty} \frac{log(n)}{n^{log(n)}}
+        = \lim_{n \rightarrow \infty} \frac{\frac{1}{n}}{2n^{log(n)-1}log(n)}
+        = \lim_{n \rightarrow \infty} \frac{1}{2n^{log(n)}log(n)}
+        = 0
+    }\stopformula
+
+    Since the limit, $L$, is zero, it can be said that $f(n)$ grows no slower than $g(n)$. Therefore, $f(n) \in \Omega(g(n))$.
+
+\subsubsubject{Case}
+
+    Since Equations \in[eqn:q5_pA_fn] and \in[eqn:q5_pA_gn] does not satisfy Theorem 1 and satisfies Theorem 2, this problem is classified as a case II.
+
+\subsubject{Part B}
+
+    The following pair of equations is given:
+    \placeformula[eqn:q5_pB_fn]
+    \startformula f(n) = n^{1+\frac{1}{2}cos(\pi n)} \stopformula
+
+    \placeformula[eqn:q5_pB_gn]
+    \startformula g(n) = n \stopformula
+
+
+\subsubsubject{Theorem 1}
+
+    Substituting Equations \in[eqn:q5_pB_fn] and \in[eqn:q5_pB_gn] into the Theorem 1 inequality yields:
+    \placeformula[eqn:q5_pB_cI_inequality]
+    \startformula
+    0 \leq n^{1+\frac{1}{2}cos(\pi n)} \leq C n
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pB_cI_inequality] yields:
+    \placeformula[eqn:q5_pB_cI_inequality_rearranged]
+    \startformula
+    0 \leq n^{\frac{1}{2}cos(\pi n)} \leq C
+    \stopformula
+
+    Equations \in[eqn:q5_pB_fn] and \in[eqn:q5_pB_gn] satisfies Theorem 1 if:
+    \placeformula[eqn:q5_pB_cI_limit]
+    \startformula
+    \lim_{n \rightarrow \infty} n^{\frac{1}{2}cos(\pi n)} = L, L \in [0, C]
+    \stopformula
+
+    From Equation \in[eqn:q5_pB_cI_limit], the square root term dominates the function, thus the lower and upper bounds of Equation \in[eqn:q5_pB_cI_limit] are, respectively:
+    \startformula
+    \lim_{n \rightarrow \infty} n^{-\frac{1}{2}} \leq \lim_{n \rightarrow \infty} n^{\frac{1}{2}cos(\pi n)} \leq \lim_{n \rightarrow \infty} n^{\frac{1}{2}}
+    \stopformula
+
+    Solving the left-hand side and right-hand side limits shows that $L$ approaches zero and infinity simultaneously and is boundedly divergent:
+    \startformula\eqalign{
+    \lim_{n \rightarrow \infty} n^{-\frac{1}{2}} = 0 \cr
+    \lim_{n \rightarrow \infty} n^{\frac{1}{2}} \rightarrow \infty
+    }\stopformula
+
+    Therefore, $f(n) \nin O(g(n))$.
+
+\subsubsubject{Theorem 2}
+
+    Substituting Equations \in[eqn:q5_pB_fn] and \in[eqn:q5_pB_gn] into the Theorem 2 inequality yields:
+    \placeformula[eqn:q5_pB_cII_inequality]
+    \startformula
+    0 \leq c n \leq n^{1+\frac{1}{2}cos(\pi n)}
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pB_cII_inequality] yields:
+    \placeformula[eqn:q5_pB_cII_inequality_rearranged]
+    \startformula
+    0 \leq \frac{1}{n^{\frac{1}{2}cos(\pi n)}} \leq \frac{1}{c}
+    \stopformula
+
+    However Inequality \in[eqn:q5_pB_cII_inequality_rearranged] has the same bounds as Inequality \in[eqn:q5_pB_cI_inequality_rearranged]. Thus $L$ will approach zero and infinity simultaneously and is boundedly divergent.
+
+    Therefore, $f(n) \nin \Omega(g(n))$.
+
+\subsubsubject{Case}
+
+    Since Equations \in[eqn:q5_pB_fn] and \in[eqn:q5_pB_gn] neither satisfies Theorem 1 and Theorem 2, this problem is classified as a case IV.
+
+\subsubject{Part C}
+
+    The following pair of equations is given:
+    \placeformula[eqn:q5_pC_fn]
+    \startformula f(n) = log_{2}(n^{log(nlog(n))}) \stopformula
+
+    \placeformula[eqn:q5_pC_gn]
+    \startformula g(n) = (log(n))^{2} \stopformula
+
+\subsubject{Theorem 1}
+
+    Substituting Equations \in[eqn:q5_pC_fn] and \in[eqn:q5_pC_gn] into the Theorem 1 inequality yields:
+    \placeformula[eqn:q5_pC_cI_inequality]
+    \startformula
+    0 \leq log_{2}(n^{log(nlog(n))}) \leq C (log(n))^{2}
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pC_cI_inequality] (refer to Appendix \in[app:q5_pC_cI_simplification] for working out) yields:
+    \placeformula[eqn:q5_pC_cI_inequality_rearranged]
+    \startformula\eqalign{
+    0 \leq \frac{1}{log(2)} + \frac{log(log(n))}{log(2)log(n)} \leq C
+    }\stopformula
+
+    Equations \in[eqn:q5_pC_fn] and \in[eqn:q5_pC_gn] satisfies Theorem 1 if:
+    \placeformula[eqn:q5_pC_cI_limit]
+    \startformula
+    \lim_{n \rightarrow \infty} \frac{1}{log(2)} + \frac{log(log(n))}{log(2)log(n)} = L, L \in [0, C]
+    \stopformula
+
+    Solving Equation \in[eqn:q5_pC_cI_limit] for $L$:
+    \startformula\eqalign{
+        \lim_{n \rightarrow \infty} \frac{1}{log(2)} + \frac{log(log(n))}{log(2)log(n)}
+        = \lim_{n \rightarrow \infty} \frac{1}{log(2)} + \lim_{n \rightarrow \infty} \frac{log(log(n))}{log(2)log(n)} \cr
+        = \frac{1}{log(2)} + 0 \cr
+        = \frac{1}{log(2)} \cr
+    }\stopformula
+
+    Since there exists a limit, $L = 1/log(2)$, it can be said that $f(n)$ grows no faster than $g(n)$. Therefore, $f(n) \in O(g(n))$.
+
+\subsubject{Theorem 2}
+
+    Substituting Equations \in[eqn:q5_pC_fn] and \in[eqn:q5_pC_gn] into the Theorem 2 inequality yields:
+    \placeformula[eqn:q5_pC_cII_inequality]
+    \startformula
+    0 \leq c (log(n))^{2} \leq log_{2}(n^{log(nlog(n))})
+    \stopformula
+
+    Rearranging and simplifying Equation \in[eqn:q5_pC_cII_inequality] (refer to Appendix \in[app:q5_pC_cII_simplification] for working out) yields:
+    \placeformula[eqn:q5_pC_cII_inequality_rearranged]
+    \startformula\eqalign{
+    0 \leq \frac{1}{log(2)} + \frac{log(log(n))}{log(2)log(n)} \leq C
+    }\stopformula
+
+    Equations \in[eqn:q5_pC_fn] and \in[eqn:q5_pC_gn] satisfies Theorem 2 if:
+    \placeformula[eqn:q5_pC_cII_limit]
+    \startformula
+    \lim_{n \rightarrow \infty} \frac{log(2)log(n)}{log(n) + log(log(n))} = L, L \in [0, C]
+    \stopformula
+
+    Check Equation \in[eqn:q5_pC_cII_limit] for indeterminate form:
+    \startformula\eqalign{
+        \lim{n \rightarrow \infty} log(2)log(n) \rightarrow \infty \cr
+        \lim{n \rightarrow \infty} log(n) + log(log(n)) \rightarrow \infty \cr
+    }\stopformula
+
+    Since both limits approach infinity, $g(n)/f(n)$ is an indeterminate form and L'H\^{o}pital's rule can be applied to solve Equation \in[eqn:q5_pC_cII_limit]:
+    \startformula\eqalign{
+        \lim_{n \rightarrow \infty} \frac{log(2)log(n)}{log(n) + log(log(n))}
+        = \lim_{n \rightarrow \infty} \frac{\frac{log(2)}{n}}{\frac{1}{n} + \frac{1}{nlog(n)}} \cr
+        = \lim_{n \rightarrow \infty} \frac{\frac{log(2)}{n}}{\frac{log(n) + 1}{nlog(n)}} \cr
+        = \lim_{n \rightarrow \infty} \frac{log(2)log(n)}{log(n) + 1} \cr
+        = \lim_{n \rightarrow \infty} log(2) \lim_{n \rightarrow \infty} \frac{log(n)}{log(n) + 1} \cr
+        = log(2) \times 1 \cr
+        = log(2)
+    }\stopformula
+
+    Since there exists a limit, $L = log(2)$, it can be said that $f(n)$ grows no slower than $g(n)$. Therefore, $f(n) \in \Omega(g(n))$.
+
+\subsubject{Case}
+
+    Since Equations \in[eqn:q5_pC_fn] and \in[eqn:q5_pC_gn] satisfies both Theorem 1 and Theorem 2 (and by extension Theorem 3), this problem is classified as a case III.
+
+\startappendices
+
+\chapter[app:q5_pC_cI_simplification]{Part C - $f(n)/g(n)$ simplification}
+
+\startformula\eqalign{
+    \frac{log_{2}(n^{log(nlog(n))})}{(log(n))^{2}}
+    = \frac{log(nlog(n))log_{2}(n)}{(log(n))^{2}} \cr
+    = \frac{log(nlog(n))log(n)}{(log(n))^{2}log(2)} \cr
+    = \frac{log(nlog(n))}{log(2)log(n)} \cr
+    = \frac{log(n) + log(log(n))}{log(2)log(n)} \cr
+    = \frac{log(n)}{log(2)log(n)} + \frac{log(log(n))}{log(2)log(n)} \cr
+    = \frac{1}{log(2)} + \frac{log(log(n))}{log(2)log(n)}
+}\stopformula
+
+\chapter[app:q5_pC_cII_simplification]{Part C - $g(n)/f(n)$ simplification}
+
+\startformula\eqalign{
+    \frac{(log(n))^{2}}{log_{2}(n^{log(nlog(n))})}
+    = \frac{(log(n))^{2}}{log(nlog(n))log_{2}(n)} \cr
+    = \frac{(log(n))^{2}log(2)}{log(nlog(n))log(n)} \cr
+    = \frac{log(2)log(n)}{log(n) + log(log(n))} \cr
+}\stopformula
+
+\stopappendices
+
+\stoptext

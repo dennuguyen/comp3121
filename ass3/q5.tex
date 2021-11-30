@@ -1,0 +1,44 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 5 by Dan Nguyen (z5206032)}
+
+    There is a given directed graph, $G(V, E)$, where each edge, $e$, has a weight, $0 < w_{e} < 1$.
+
+    The {\it safety} of a path from $u$ to $v$ with edges $e_{1}, e_{2}, ..., e_{k}$ is $\prod_{i=1}^{k} w_{e_{i}}$.
+
+    Let there be a matrix, $D$, which is initialised by $G$'s adjacency matrix representation.
+
+    Consider a modified Floyd-Warshall algorithm which stores the {\it safety} from $u$ to $v$ in $D$ instead of the distance, and the maximum {\it safety} is preferred i.e. the computed {\it safety} replaces the original {\it safety} if the computed value is greater than the original.
+
+    Define $Q(i, j, k)$ as the problem of finding the {\it safety} from a node $i$ to $j$ for $G[1..k]$ ending with $G[k]$.
+
+    Define $\text{opt}(i, j, k)$ as the solution to $Q(i, j, k)$.
+
+    For all $1 \leq i$, $j \leq n$, and $0 \leq k \leq n$, solve for $Q(i, j, k)$ using dynamic programming where the recurrence is:
+    \startformula \text{opt}(i, j, k) = \text{max}\{ \text{opt}(i, j, k - 1),\; \text{opt}(i, k, k - 1) + \text{opt}(k, j, k - 1) \}\stopformula
+
+    The base case is:
+    \startformula
+        \text{opt}(i, j, 0) = 
+        \startmathcases
+            \NC 1 \NC \text{if } i = j \NR
+            \NC w(i, j) \NC \text{if } (i, j) \in E \NR
+            \NC 1 \NC \text{otherwise} \NR
+        \stopmathcases
+    \stopformula
+
+    The order of solving $Q$ is important i.e. subproblems with lesser $i$ and $j$ are solved first.
+
+    The final answer is:
+    \startformula \text{opt}(n, n, k) = \text{max}\{ \text{opt}(n, n, k - 1),\; \text{opt}(n, k, k - 1) + \text{opt}(k, n, k - 1) \}\stopformula
+
+    The Floyd-Warshall algorithm has a worst time complexity of $O(|V^{3}|) = O(n^{3})$ for $G$ with $n$ vertices.
+
+    For a set of ordered pairs of vertices, $S = \{(u_{1}, v_{1}), ...\}$, $S$ has a capacity of $n^{2}$ pair combinations since there are $n$ vertices in $G$. Looking up $D(u, v)$ for the maximum {\it safety} from $u$ to $v$ for at worst $n^{2}$ pair combinations has a time complexity of $O(n^{2})$.
+
+    The overall worst time complexity is $O(n^{3}) + O(n^{2}) = O(n^{3})$ as required.
+
+\stoptext

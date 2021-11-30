@@ -1,0 +1,29 @@
+\usemodule[m-ass]
+\usemodule[newmat]
+
+\starttext
+
+\subject{Question 4 by Dan Nguyen (z5206032)}
+
+    Let there be a flow network represented as a directed graph with the following properties:
+    \startitemize[nowhite, after]
+        \item the flow is a pair of drink and dessert served to a customer;
+        \item nodes are either a customer-drink pair, customer-dessert pair, type of drink, or type of dessert where there are two $k$ customers, $n$ types of drinks, and $m$ types of desserts;
+        \item the super-source is an arbitrary node with an edge to all types of drink nodes, where the capacity of the edges are $a_{i} \; | \; 1 \leq i \leq n$;
+        \item the super-sink is an arbitrary node with an edge to all types of dessert nodes, where the capacity of the edges are $b_{j} \; | \;1 \leq j \leq m$;
+        \item there are $k$ customer-drink nodes, where the $r^{th}$ customer has $p_{r}$ favourite drinks with unit-capacity edges to their favourite types of drinks: $(c_{r, 1}, c_{r, 2}, ..., c_{r, p_{r}})$;
+        \item there are $k$ customer-dessert nodes, where the $r^{th}$ customer has $q_{r}$ favourite drinks with unit-capacity edges to their favourite types of desserts: $(d_{r, 1}, d_{r, 2}, ..., d_{r, q_{r}})$; and
+        \item a unit-capacity edge exists between the $r^{th}$ customer-drink and $r^{th}$ customer-dessert node for all $1 \leq r \leq k$;
+    \stopitemize
+
+    Let the max flow, $f$, be the max number of pairs of drink and dessert served to as many customers as possible i.e. $f$ is at most $k$.
+
+    There are at most $E = n + \sum_{r}p_{r} + k + \sum_{r}q_{r} + m$ edges.
+
+    There are at most $V = n + k + k + m$ nodes.
+
+    To find $f$, apply the Edmonds-Karp algorithm to the flow network which will have a time complexity $O(\text{min}(|V||E|^{2}, \; |E|f)) = O(\text{min}(V \cdot E^{2}, \; E \cdot k))$.
+
+    The minimum number of poor ratings can therefore be determined by $k - f$.
+
+\stoptext
