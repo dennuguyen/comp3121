@@ -62,10 +62,10 @@ system          >   13: filename=lmroman8-regular filetype=otf format=otf foundn
 system          >   14: filename=lmroman10-italic filetype=otf format=otf foundname=/home/dan/bin/context/tex/texmf/fonts/opentype/public/lm/lmroman10-italic.otf fullname=/home/dan/bin/context/tex/texmf/fonts/opentype/public/lm/lmroman10-italic.otf usedmethod=database
 system          > stop used files
 system          > start commandline options
-system          > currentrun="2"
+system          > currentrun="1"
 system          > fulljobname="./notes.tex"
 system          > input="./notes.tex"
-system          > kindofrun="2"
+system          > kindofrun="1"
 system          > maxnofruns="9"
 system          > texmfbinpath="/home/dan/bin/context/tex/texmf-linux-64/bin"
 system          > stop commandline options
@@ -87,24 +87,24 @@ system          >   min     150000   10000000     150000     150000    1000000  
 system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250
 system          >   stp     100000    1000000     100000     100000     500000     250000    1000000      10000        250       1000      10000      10000        250        250         50         25
 system          > 
-system          >   mem     150000     899740     150000               1000000    1000000    1000000      10000        500       1000      20000      10000   11574016         96       1200        240
-system          >   all    2400000     899740    2400000               9000000    8000000    1000000     320000      16000      48000      80000     160000   11574016         96      28800       5760
+system          >   mem     150000     899751     150000               1000000    1000000    1000000      10000        500       1000      20000      10000   11574144         96       1200        240
+system          >   all    2400000     899751    2400000               9000000    8000000    1000000     320000      16000      48000      80000     160000   11574144         96      28800       5760
 system          > 
 system          >   ini    2141741     841247          0      44572          0     490225                                                                                       0                      
-system          >   ptr      46382                  9090      46365                541179          0          0          0          0          0          0         23          0          0          7
-system          >   top      46383                740039     131074      36534     541587        433         47          6         13         48        356        250        250         50         10
+system          >   ptr      46383                  9091      46366                541180          0          0          0          0          0          0         23          0          0          7
+system          >   top      46384                740039     131074      36704     541587        433         47          6         13         48        356        250        250         50         10
 system          >   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 system          > 
 system          >   current input type    : initial
 system          > 
-system          >   approximate memory    : 38462444 (36 MB)
+system          >   approximate memory    : 38462583 (36 MB)
 system          > 
 system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 10
 system          > 
 system          >   luabytecode registers : 998
 system          >   luabytecode bytes     : 15984 (0 MB)
-system          >   luastate bytes now    : 69744206 (66 MB)
-system          >   luastate bytes max    : 69744206 (66 MB)
+system          >   luastate bytes now    : 69743613 (66 MB)
+system          >   luastate bytes max    : 69743613 (66 MB)
 system          > 
 system          >   file callbacks        : 244
 system          >   saved callbacks       : 2476
@@ -127,29 +127,27 @@ system          >   backend callbacks     : 0
 system          > 
 mkiv lua stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
 mkiv lua stats  > used cache path: /home/dan/bin/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
-mkiv lua stats  > resource resolver: loadtime 0.000 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 14 found files, scanned paths: <none>
-mkiv lua stats  > stored bytecode data: 498 modules (0.297 sec), 100 tables (0.016 sec), 598 chunks (0.312 sec)
+mkiv lua stats  > resource resolver: loadtime 0.016 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 14 found files, scanned paths: <none>
+mkiv lua stats  > stored bytecode data: 498 modules (0.156 sec), 100 tables (0.016 sec), 598 chunks (0.172 sec)
 mkiv lua stats  > traced context: maxstack: 1595, freed: 0, unreachable: 1595
 mkiv lua stats  > cleaned up reserved nodes: 69 nodes, 9 lists of 434
 mkiv lua stats  > node memory usage: 63 attribute, 22 attribute_list, 2 glue, 59 glue_spec, 3 kern, 3 penalty, 2 temp
 mkiv lua stats  > node list callback tasks: 10 unique task lists, 10 instances (re)created, 1319 calls
-mkiv lua stats  > h-node processing time: 0.016 seconds including kernel
 mkiv lua stats  > attribute processing time: 0.016 seconds front- and backend
-mkiv lua stats  > driver time: 0.047 seconds 
 mkiv lua stats  > used backend: pdf (backend for directly generating pdf output)
 mkiv lua stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
 mkiv lua stats  > callbacks: file: 244, saved: 2476, direct: 2, function: 2597, value: 6, message: 0, bytecode: 598, late 0, total: 5923 (987 per page)
 mkiv lua stats  > randomizer: resumed with value 0.58857966955128
+mkiv lua stats  > v-node processing time: 0.016 seconds 
 mkiv lua stats  > loaded tex modules: 2 requested, 1 found (*-m-notes), 1 missing (*-newmat)
 mkiv lua stats  > loaded patterns: en::1, load time: 0.000
 mkiv lua stats  > loaded fonts: 6 files: latinmodern-math.otf, lmroman10-bold.otf, lmroman10-italic.otf, lmroman10-regular.otf, lmroman8-regular.otf, lmroman9-regular.otf
-mkiv lua stats  > font engine: otf 3.119, afm 1.513, tfm 1.000, 23 instances, 15 shared in backend, 3 common vectors, 12 common hashes, load time 0.344 seconds 
-mkiv lua stats  > math processing time: 0.016 seconds 
-mkiv lua stats  > font embedding time: 0.016 seconds, 6 fonts
+mkiv lua stats  > font engine: otf 3.119, afm 1.513, tfm 1.000, 23 instances, 15 shared in backend, 3 common vectors, 12 common hashes, load time 0.531 seconds 
+mkiv lua stats  > font embedding time: 0.047 seconds, 6 fonts
 mkiv lua stats  > result saved in file: notes.pdf, compresslevel 1, objectcompresslevel 3
 mkiv lua stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
 mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: texmf-linux-64
 mkiv lua stats  > used engine: luametatex version: 2.0921, functionality level: 20210903, format id: 594, compiler: gcc
-mkiv lua stats  > tex properties: 740039 hash slots used of 2097152, 46365 control sequences, approximate memory usage: 36 MB
+mkiv lua stats  > tex properties: 740039 hash slots used of 2097152, 46366 control sequences, approximate memory usage: 36 MB
 mkiv lua stats  > lua properties: engine: lua 5.4, used memory: 69 MB, ctx: 66 MB, max: 66 MB, symbol mask: utf (τεχ)
-mkiv lua stats  > runtime: 1.414 seconds, 6 processed pages, 6 shipped pages, 4.242 pages/second
+mkiv lua stats  > runtime: 1.652 seconds, 6 processed pages, 6 shipped pages, 3.633 pages/second
