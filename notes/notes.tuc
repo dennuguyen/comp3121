@@ -48,6 +48,18 @@ utilitydata.job.passes.collected={
  ["itemgroup:itemize:1"]={
   { 4, 0 },
  },
+ ["itemgroup:itemize:10"]={
+  { 6, 0 },
+ },
+ ["itemgroup:itemize:11"]={
+  { 2, 0 },
+ },
+ ["itemgroup:itemize:12"]={
+  { 2, 0 },
+ },
+ ["itemgroup:itemize:13"]={
+  { 3, 0 },
+ },
  ["itemgroup:itemize:2"]={
   { 4, 0 },
  },
@@ -127,7 +139,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["itemgroup:itemize"]={
-  { 0, 4, 4, 4, 6, 6, 7, 8, 3, 4 },
+  { 0, 4, 4, 4, 6, 6, 7, 8, 3, 4, 6, 2, 2, 3 },
  },
  ["itemgroup:itemize:note"]={
   { 0 },
@@ -139,10 +151,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 6 },
+  { 7 },
  },
  ["subpage"]={
-  { 6 },
+  { 7 },
  },
  ["table"]={
   { 0 },
@@ -151,7 +163,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 6 },
+  { 7 },
  },
 }
 
@@ -361,7 +373,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=15,
-   ["realpage"]=5,
+   ["realpage"]=6,
    ["section"]=0,
   },
   ["titledata"]={
@@ -370,12 +382,40 @@ utilitydata.structures.lists.collected={
   },
  },
  {
+  ["metadata"]=4,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=16,
+   ["realpage"]=6,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="subsection",
+   ["title"]="Finite Automata",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=17,
+   ["realpage"]=6,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="subsection",
+   ["title"]="Knuth-Morris-Pratt Algorithm",
+  },
+ },
+ {
   ["metadata"]=1,
   ["numberdata"]=3,
   ["references"]={
    ["block"]="bodypart",
-   ["internal"]=16,
-   ["realpage"]=5,
+   ["internal"]=18,
+   ["realpage"]=7,
    ["section"]=0,
   },
   ["titledata"]={
@@ -384,12 +424,40 @@ utilitydata.structures.lists.collected={
   },
  },
  {
+  ["metadata"]=4,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=19,
+   ["realpage"]=7,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="subsection",
+   ["title"]="Weak Duality Theorem",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=20,
+   ["realpage"]=7,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="subsection",
+   ["title"]="Integer Linear Programming",
+  },
+ },
+ {
   ["metadata"]=1,
   ["numberdata"]=3,
   ["references"]={
    ["block"]="bodypart",
-   ["internal"]=17,
-   ["realpage"]=6,
+   ["internal"]=21,
+   ["realpage"]=7,
    ["section"]=0,
   },
   ["titledata"]={
@@ -441,6 +509,13 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=6,
+  ["numberdata"]=7,
+  ["prefixdata"]=8,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
   ["numberdata"]=7,
   ["prefixdata"]=8,
   ["state"]="start",

@@ -167,12 +167,62 @@
 
 \subject{String Matching} %TODO
 
-    String matching is determining if string, $A$, has a contiguous substring, $B$.
+    String matching is determining if a given string, $A$, has a contiguous given substring/pattern, $B$.
 
     \subsubject{Rabin-Karp Algorithm}
 
-        
+        Rabin-Karp algorithm uses hashing and recursion to efficiently find matching strings in average $O(n + m)$ but is limited by unlikely possibility of hash collisions, therefore cannot guarantee worst case performance, $O(nm)$.
+
+        \startitemize[n]
+            \item Map symbol $s_{i} \rightarrow i$: $S = \{s_{0}, s_{1}, ..., s_{d-1}\} \rightarrow \{0, 1, ..., d-1\}$.
+            \item Construct and evaluate hash integer using Horner's rule: $H(B) = h(b_{0}b_{1}...b_{m}) = d^{m-1}b_{0} + d^{m-2}b_{1} + ... + db_{m-2} + b_{m-1}$.
+            \item Choose large prime number: $p$.
+            \item Let $H(B) = h(B) \% p$.
+            \item Compute hash, $H(A_{s})$, for each $A_{s} = a_{s}a_{s+1}...a_{s+m-1}$ of $A$. Using recursion to compute hash: $H(A_{s+1}) = dH(A_{s}) - (d^{m}a_{s} + a_{s + m}) \% p$.
+            \item Compare hash values of $H(B)$ and $H(A_{s})$. Do symbol-by-symbol matching $\iff$ $H(B) = H(A_{s})$.
+        \stopitemize
+
+    \subsubject{Finite Automata} %TODO
+
+    Pattern $B$ can be converted into a finite automata (simple state machine). The method (by-hand) to get the state transition table from $B$ is:
+    \startitemize[n]
+        \item Draw out a table with rows for each state (i.e. each index in $B$); and columns for each transition (i.e. each symbol in $B$).
+        \item Input the ???.
+    \stopitemize
+
+    The method (by-hand) to get the state transition diagram from the table is:
+    \startitemize[n]
+        \item Draw nodes for each row.
+        \item Draw directed arrows from the row's index to the index specified in the transition column and label it with the transition symbol.
+    \stopitemize
+
+    \subsubject{Knuth-Morris-Pratt Algorithm} %TODO
+
+    Knuth-Morris-Pratt algorithm uses finite automata and recursion to efficiently find matching strings in $O(n)$.
+    \startitemize[n]
+        \item Suppose $B_{s} = b_{0}..b_{s-1}$ is longer prefix of $B$ which is suffix of $A_{i} = a_{0}..a_{i - 1}$.
+        \item If $a_{i} = b_{s}$ then let $s = s + 1$; else, recursively check condition by letting $s = \pi(s)$.
+        \item If $s = m$ then string match found.
+    \stopitemize
 
 \subject{Linear Programming} %TODO
+
+    Linear programming optimises linear functions subject to various conditions. Standard form of the primal linear program, $P$, is: maximise $z({\bf x}) = {\bf c}^T {\bf x}$, subject to $A{\bf x} \leq {\bf b}$ and ${\bf x} \geq {\bf 0}$.
+
+    The standard form of the dual linear program, $P^{*}$, is: minimise $z^{*}({\bf y}) = {\bf b}^T {\bf y}$ subject to $A{\bf y} \geq {\bf c}$ and ${\bf y} \geq {\bf 0}$.
+
+
+    \subsubject{Weak Duality Theorem}
+
+    If $x = \langle x_{1}, ..., x_{n} \rangle$ is any feasible solution for $P$ and $y = \langle y_{1}, ..., y_{m} \rangle$ is any feasible solution for $P^{*}$ then:
+        \startformula
+            z(x) = \sum_{j=1}^{n}c_{j}x_{j} \leq \sum_{i=1}^{n}b_{i}y_{i} = z^{*}(y)
+        \stopformula
+
+        Any $x$ is a lower bound for $P^{*}$ and any $y$ is an upper bound for $P$, so if $x = y$ then optimal solution has been found.
+
+    \subsubject{Integer Linear Programming}
+
+    Integer linear programming restricts some or all variables to be integers. standard form is: maximise ${\bf c}^T {\bf x}$ subject to $A{\bf x} + {\bf s} = {\bf b}$, ${\bf s} \geq {\bf 0}$, and ${\bf x} \geq {\bf 0} \in \mathbb{Z}^{n}$.
 
 \subject{Intractability} %TODO
