@@ -182,7 +182,7 @@
             \item Compare hash values of $H(B)$ and $H(A_{s})$. Do symbol-by-symbol matching $\iff$ $H(B) = H(A_{s})$.
         \stopitemize
 
-    \subsubject{Finite Automata} %TODO
+    \subsubject{Finite Automata}
 
     Pattern $B$ can be converted into a finite automata (simple state machine). The method (by-hand) to get the state transition table from $B$ is:
     \startitemize[n]
@@ -196,7 +196,7 @@
         \item Draw directed arrows from the row's index to the index specified in the transition column and label it with the transition symbol.
     \stopitemize
 
-    \subsubject{Knuth-Morris-Pratt Algorithm} %TODO
+    \subsubject{Knuth-Morris-Pratt Algorithm}
 
     Knuth-Morris-Pratt algorithm uses finite automata and recursion to efficiently find matching strings in $O(n)$.
     \startitemize[n]
@@ -205,7 +205,7 @@
         \item If $s = m$ then string match found.
     \stopitemize
 
-\subject{Linear Programming} %TODO
+\subject{Linear Programming}
 
     Linear programming optimises linear functions subject to various conditions. Standard form of the primal linear program, $P$, is: maximise $z({\bf x}) = {\bf c}^T {\bf x}$, subject to $A{\bf x} \leq {\bf b}$ and ${\bf x} \geq {\bf 0}$.
 
@@ -223,6 +223,27 @@
 
     \subsubject{Integer Linear Programming}
 
-    Integer linear programming restricts some or all variables to be integers. standard form is: maximise ${\bf c}^T {\bf x}$ subject to $A{\bf x} + {\bf s} = {\bf b}$, ${\bf s} \geq {\bf 0}$, and ${\bf x} \geq {\bf 0} \in \mathbb{Z}^{n}$.
+    Integer linear programming restricts some or all variables to be integers. Standard form is: maximise ${\bf c}^T {\bf x}$ subject to $A{\bf x} + {\bf s} = {\bf b}$, ${\bf s} \geq {\bf 0}$, and ${\bf x} \geq {\bf 0} \in \mathbb{Z}^{n}$.
 
-\subject{Intractability} %TODO
+\subject{Intractability}
+
+    Consider the following classes of decision (true/false) problems:
+
+    \startitemize
+        \item $A(x) \in {\bf P}$ (polynomial time) if $\exists$ a polynomial time algorithm which solves $A$.
+        \item $A(x) \in {\bf NP}$ (non-deterministic polynomial time) if $\exists$ a problem $B(x, y)$ such that:
+        \startitemize
+            \item $A(x) = \text{true}$ $\forall$ $x$ $\iff$ $\exists$ some $y$ for $B(x, y) = \text{true}$; and
+            \item $B(x, y)$ can be verified by a polynomial algorithm in length of $x$ only.
+        \stopitemize
+        \item $A(x) \in {\bf NP-C}$ (non-deterministic polynomial complete time) if every other {\bf NP} problem is polynomially reducible to $A$ i.e. $U$ is polynomially reducible to $V$ $\iff$ $\exists$ $f(x)$ such that:
+        \startitemize
+            \item $f(U) \rightarrow V$ $\bigcap$ $f(U) = V$
+            \item $f(x)$ is computable by a polynomial time algorithm.
+        \stopitemize
+        \item $A(x) \in {\bf NP-H}$ (non-deterministic polynomial hard time) if every {\bf NP} problem is polynomial time in $A$.
+    \stopitemize
+
+    \subsubject{Cook's Theorem}
+
+        Every {\bf NP} problem is polynomially reducible to the boolean satisfiability (SAT) problem.

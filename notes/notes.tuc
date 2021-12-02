@@ -60,6 +60,10 @@ utilitydata.job.passes.collected={
  ["itemgroup:itemize:13"]={
   { 3, 0 },
  },
+ ["itemgroup:itemize:14"]={
+  { 4, 0 },
+  { 2, 0 },
+ },
  ["itemgroup:itemize:2"]={
   { 4, 0 },
  },
@@ -139,7 +143,8 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["itemgroup:itemize"]={
-  { 0, 4, 4, 4, 6, 6, 7, 8, 3, 4, 6, 2, 2, 3 },
+  { 0, 4, 4, 4, 6, 6, 7, 8, 3, 4, 6, 2, 2, 3, 4 },
+  { 0, 2, 0, 2, 0 },
  },
  ["itemgroup:itemize:note"]={
   { 0 },
@@ -151,10 +156,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 7 },
+  { 8 },
  },
  ["subpage"]={
-  { 7 },
+  { 8 },
  },
  ["table"]={
   { 0 },
@@ -163,7 +168,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 7 },
+  { 8 },
  },
 }
 
@@ -465,6 +470,20 @@ utilitydata.structures.lists.collected={
    ["title"]="Intractability",
   },
  },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=22,
+   ["realpage"]=8,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="subsection",
+   ["title"]="Cook's Theorem",
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -516,6 +535,13 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=7,
+  ["numberdata"]=7,
+  ["prefixdata"]=8,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
   ["numberdata"]=7,
   ["prefixdata"]=8,
   ["state"]="start",

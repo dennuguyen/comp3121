@@ -44,17 +44,144 @@ pages           > flushing realpage 6, userpage 6, subpage 6
 structure       > sectioning > subsubject @ level 4 : 0.0.0.0 -> Weak Duality Theorem
 structure       > sectioning > subsubject @ level 4 : 0.0.0.0 -> Integer Linear Programming
 structure       > sectioning > subject @ level 3 : 0.0.0 -> Intractability
+Overfull \hbox (3.25525pt too wide) in paragraph at lines 244--245
+3:4: [glue]<l2r par>[glue][hlist][boundary][hlist][penalty][glue][penalty][glue]$<4: latinmodern-math @ 11.0pt> 𝐴(𝑥)[glue]∈[penalty][glue][hlist]$ <1: lmroman10-regular @ 11.0pt> (non-deterministic p[kern]olynomial hard time) if ev[kern]ery <10: lmroman10-bold @ 11.0pt> NP <1: lmroman10-regular @ 11.0pt> problem is p[kern]olynomial[glue]
+3:4: 
+3:4: \hbox[normal][color=1,colormodel=1,marks=21], width 455.24408, height 9.55925, depth 3.71747, glue - 1.0, direction l2r
+3:4: .\list
+3:4: ..\glue[left][color=1,colormodel=1,marks=21] 16.50238pt
+3:4: ..\par[newgraf][color=1,colormodel=1,marks=21], hangafter 1, hsize 455.24408, leftskip 16.50238pt, pretolerance 100, tolerance 200, adjdemerits 10000, linepenalty 10, doublehyphendemerits 10000, finalhyphendemerits 5000, clubpenalty 2000, widowpenalty 2000, brokenpenalty 100, parfillskip 0.0pt plus 1.0fil, hyphenationmode 499519
+3:4: ..\glue[indent][color=1,colormodel=1,marks=21] 0.0pt
+3:4: ..\hbox[hbox][color=1,colormodel=1,marks=21], height 9.55925, depth 3.71747, glue - 16.50238fil, direction l2r
+3:4: ...\list
+3:4: ....\glue[user][color=1,colormodel=1,marks=21] 0.0pt plus 1.0fil minus 1.0fil
+3:4: ....\hbox[hbox][color=1,colormodel=1,marks=21], width 16.50238, height 9.55925, depth 3.71747, direction l2r
+3:4: .....\list
+3:4: ......\hbox[hbox][color=1,colormodel=1,marks=21], width 16.50238, height 9.55925, depth 3.71747, glue 7.94315fil, direction l2r
+3:4: .......\list
+3:4: ........\hbox[hbox][color=1,colormodel=1,marks=21], width 8.55923, height 9.55925, depth 3.71747, direction l2r
+3:4: .........\list
+3:4: ..........\dir[normal][color=1,colormodel=1,marks=21] l2r
+3:4: ..........\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+002022 •
+3:4: ..........\dir[cancel][color=1,colormodel=1,marks=21] l2r
+3:4: ........\glue[user][color=1,colormodel=1,marks=21] 0.0pt plus 1.0fil
+3:4: ........\glue[user][color=1,colormodel=1,marks=21] 0.0pt
+3:4: ..\boundary[user][color=1,colormodel=1,marks=21] 1
+3:4: ..\hbox[hbox][color=1,colormodel=2], height 9.55925, depth 3.71747, direction l2r
+3:4: ..\penalty[user][color=1,colormodel=1,marks=21] 10000
+3:4: ..\glue[user][color=1,colormodel=1,marks=21] 0.0pt
+3:4: ..\penalty[user][color=1,colormodel=1,marks=21] 10000
+3:4: ..\glue[user][color=1,colormodel=1,marks=21] 0.00021pt
+3:4: ..\math[begin][color=1,colormodel=1,marks=21,mathfamily=0,mathitalics=3,mathalphabet=57,mathgreek=562,mathcollapsing=1]
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+01D434 𝐴
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+000028 (
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+01D465 𝑥
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+000029 )
+3:4: ..\glue[intermath][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1] 3.0555pt plus 3.0555pt
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+002208 ∈
+3:4: ..\penalty[noad][color=1,colormodel=1,marks=21,mathfamily=0,mathitalics=3,mathalphabet=57,mathgreek=562,mathcollapsing=1] 500
+3:4: ..\glue[intermath][color=1,colormodel=1,marks=21,mathfamily=0,mathitalics=3,mathalphabet=57,mathgreek=562,mathcollapsing=1] 3.0555pt plus 3.0555pt
+3:4: ..\hbox[normal][color=1,colormodel=1,marks=21,mathfamily=0,mathitalics=3,mathalphabet=57,mathgreek=562,mathcollapsing=1], width 41.89813, height 7.54709, direction l2r
+3:4: ...\list
+3:4: ....\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+01D40D 𝐍
+3:4: ....\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+01D40F 𝐏
+3:4: ....\glue[intermath][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1] 2.4444pt plus 1.2222pt minus 2.4444pt
+3:4: ....\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+002212 −
+3:4: ....\glue[intermath][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1] 2.4444pt plus 1.2222pt minus 2.4444pt
+3:4: ....\glyph[32768][color=1,colormodel=1,marks=21,mathfamily=0,mathalphabet=0,mathgreek=0,mathcollapsing=1], options "80, font <4: latinmodern-math @ 11.0pt>, glyph U+01D407 𝐇
+3:4: ..\math[end][color=1,colormodel=1,marks=21,mathfamily=0,mathitalics=3,mathalphabet=57,mathgreek=562,mathcollapsing=1]
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000028 (
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006E n
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006E n
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, discpart 4, font <1: lmroman10-regular @ 11.0pt>, glyph U+00002D -
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000064 d
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000074 t
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000072 r
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006D m
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006E n
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000073 s
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000074 t
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000063 c
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000070 p
+3:4: ..\kern[font][color=1,colormodel=1,marks=21], amount 0.30804
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006C l
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000079 y
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006E n
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006D m
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000061 a
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006C l
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000068 h
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000061 a
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000072 r
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000064 d
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000074 t
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006D m
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000029 )
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000066 f
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000076 v
+3:4: ..\kern[font][color=1,colormodel=1,marks=21], amount -0.30804
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000072 r
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000079 y
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <10: lmroman10-bold @ 11.0pt>, glyph U+00004E N
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <10: lmroman10-bold @ 11.0pt>, glyph U+000050 P
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.82993pt minus 1.2224pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000070 p
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000072 r
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000062 b
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006C l
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000065 e
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006D m
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000073 s
+3:4: ..\glue[space][color=1,colormodel=1,marks=21] 3.66353pt plus 1.83177pt minus 1.22118pt, font 1
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000070 p
+3:4: ..\kern[font][color=1,colormodel=1,marks=21], amount 0.30804
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006C l
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000079 y
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006E n
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006F o
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006D m
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000069 i
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+000061 a
+3:4: ..\glyph[32768][color=1,colormodel=1,marks=21], language (n=1,l=2,r=3), hyphenationmode "79F3F, options "80, font <1: lmroman10-regular @ 11.0pt>, glyph U+00006C l
+3:4: ..\glue[right][color=1,colormodel=1,marks=21] 0.0pt
+structure       > sectioning > subsubject @ level 4 : 0.0.0.0 -> Cook's Theorem
 close source    > level 1, order 3, name './notes.tex'
 system          > invalid \starttext ... \stoptext structure
 pages           > flushing realpage 7, userpage 7, subpage 7
+pages           > flushing realpage 8, userpage 8, subpage 8
 system          > start used files
 system          > text: notes
 system          > stop used files
 system          > start used files
-system          >    1: filename=publ-imp-default.lua filetype=lua foundname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    1: filename=publ-imp-default.lua filetype=scripts foundname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
 system          >    2: filename=cont-new.mkxl filetype=tex foundname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
-system          >    3: filename=lang-exc.lua filetype=lua foundname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
-system          >    4: filename=lang-us.lua filetype=lua foundname=/home/dan/bin/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    3: filename=lang-exc.lua filetype=scripts foundname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    4: filename=lang-us.lua filetype=scripts foundname=/home/dan/bin/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/home/dan/bin/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
 system          >    5: filename=/mnt/c/Users/Dan/Documents/uni/2021T3/COMP3121/notes/notes.tex format=tex foundname=/mnt/c/Users/Dan/Documents/uni/2021T3/COMP3121/notes/notes.tex fullname=/mnt/c/Users/Dan/Documents/uni/2021T3/COMP3121/notes/notes.tex usedmethod=direct
 system          >    6: filename=m-notes.tex format=tex foundname=m-notes.tex fullname=/mnt/c/Users/Dan/Documents/uni/2021T3/COMP3121/notes/m-notes.tex usedmethod=direct
 system          >    7: filename=lm.lfg filetype=tex foundname=/home/dan/bin/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/home/dan/bin/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
@@ -92,30 +219,30 @@ system          >   min     150000   10000000     150000     150000    1000000  
 system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250
 system          >   stp     100000    1000000     100000     100000     500000     250000    1000000      10000        250       1000      10000      10000        250        250         50         25
 system          > 
-system          >   mem     150000     899751     150000               1000000    1000000    1000000      10000        500       1000      20000      10000   11574080         96       1200        240
-system          >   all    2400000     899751    2400000               9000000    8000000    1000000     320000      16000      48000      80000     160000   11574080         96      28800       5760
+system          >   mem     150000     899849     150000               1000000    1000000    1000000      10000        500       1000      20000      10000   11574144         96       1200        240
+system          >   all    2400000     899849    2400000               9000000    8000000    1000000     320000      16000      48000      80000     160000   11574144         96      28800       5760
 system          > 
 system          >   ini    2141741     841247          0      44572          0     490225                                                                                       0                      
-system          >   ptr      46383                  9091      46366                545627          0          0          0          0          0          0         23          0          0          7
-system          >   top      46384                740039     131074      36750     541587        433         47          6         13         48        356        250        250         50         10
+system          >   ptr      46389                  9092      46372                546900          0          0          0          0          0          0         23          0          0          7
+system          >   top      46390                740039     131074      36846     541587        433         47          6         13         48        356        250        250         50         10
 system          >   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 system          > 
 system          >   current input type    : initial
 system          > 
-system          >   approximate memory    : 38462519 (36 MB)
+system          >   approximate memory    : 38462681 (36 MB)
 system          > 
 system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 10
 system          > 
 system          >   luabytecode registers : 998
 system          >   luabytecode bytes     : 15984 (0 MB)
-system          >   luastate bytes now    : 70004821 (66 MB)
-system          >   luastate bytes max    : 70004821 (66 MB)
+system          >   luastate bytes now    : 70123826 (66 MB)
+system          >   luastate bytes max    : 70123826 (66 MB)
 system          > 
-system          >   file callbacks        : 294
-system          >   saved callbacks       : 3100
+system          >   file callbacks        : 315
+system          >   saved callbacks       : 4237
 system          >   direct callbacks      : 2
-system          >   function callbacks    : 3059
-system          >   value callbacks       : 7
+system          >   function callbacks    : 3206
+system          >   value callbacks       : 8
 system          >   message callbacks     : 0
 system          >   bytecode callbacks    : 598
 system          > 
@@ -126,34 +253,35 @@ system          >   mp text callbacks     : 0
 system          >   mp script callbacks   : 0
 system          >   mp log callbacks      : 0
 system          > 
-system          >   total callbacks       : 7060
+system          >   total callbacks       : 8366
 system          >   mp total callbacks    : 0
 system          >   backend callbacks     : 0
 system          > 
 mkiv lua stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
 mkiv lua stats  > used cache path: /home/dan/bin/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
 mkiv lua stats  > resource resolver: loadtime 0.000 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 14 found files, scanned paths: <none>
-mkiv lua stats  > stored bytecode data: 498 modules (0.391 sec), 100 tables (0.016 sec), 598 chunks (0.406 sec)
+mkiv lua stats  > stored bytecode data: 498 modules (0.359 sec), 100 tables (0.031 sec), 598 chunks (0.391 sec)
 mkiv lua stats  > traced context: maxstack: 1595, freed: 0, unreachable: 1595
 mkiv lua stats  > cleaned up reserved nodes: 69 nodes, 9 lists of 434
-mkiv lua stats  > node memory usage: 73 attribute, 25 attribute_list, 1 glue, 59 glue_spec, 3 kern, 3 penalty, 2 temp
-mkiv lua stats  > node list callback tasks: 10 unique task lists, 10 instances (re)created, 1677 calls
-mkiv lua stats  > h-node processing time: 0.047 seconds including kernel
+mkiv lua stats  > node memory usage: 73 attribute, 25 attribute_list, 1 glue, 59 glue_spec, 3 kern, 2 penalty, 2 temp
+mkiv lua stats  > node list callback tasks: 10 unique task lists, 10 instances (re)created, 1844 calls
+mkiv lua stats  > h-node processing time: 0.031 seconds including kernel
 mkiv lua stats  > driver time: 0.047 seconds 
 mkiv lua stats  > used backend: pdf (backend for directly generating pdf output)
-mkiv lua stats  > jobdata time: 0.016 seconds saving, 0.000 seconds loading
-mkiv lua stats  > callbacks: file: 294, saved: 3100, direct: 2, function: 3059, value: 7, message: 0, bytecode: 598, late 0, total: 7060 (1009 per page)
+mkiv lua stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkiv lua stats  > callbacks: file: 315, saved: 4237, direct: 2, function: 3206, value: 8, message: 0, bytecode: 598, late 0, total: 8366 (1046 per page)
 mkiv lua stats  > randomizer: resumed with value 0.58857966955128
+mkiv lua stats  > v-node processing time: 0.016 seconds 
 mkiv lua stats  > loaded tex modules: 2 requested, 1 found (*-m-notes), 1 missing (*-newmat)
 mkiv lua stats  > loaded patterns: en::1, load time: 0.000
 mkiv lua stats  > loaded fonts: 6 files: latinmodern-math.otf, lmroman10-bold.otf, lmroman10-italic.otf, lmroman10-regular.otf, lmroman8-regular.otf, lmroman9-regular.otf
-mkiv lua stats  > font engine: otf 3.119, afm 1.513, tfm 1.000, 23 instances, 15 shared in backend, 3 common vectors, 12 common hashes, load time 0.547 seconds 
+mkiv lua stats  > font engine: otf 3.119, afm 1.513, tfm 1.000, 23 instances, 15 shared in backend, 3 common vectors, 12 common hashes, load time 0.344 seconds 
 mkiv lua stats  > math processing time: 0.047 seconds 
-mkiv lua stats  > font embedding time: 0.047 seconds, 6 fonts
+mkiv lua stats  > font embedding time: 0.016 seconds, 6 fonts
 mkiv lua stats  > result saved in file: notes.pdf, compresslevel 1, objectcompresslevel 3
 mkiv lua stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
 mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: texmf-linux-64
 mkiv lua stats  > used engine: luametatex version: 2.0921, functionality level: 20210903, format id: 594, compiler: gcc
-mkiv lua stats  > tex properties: 740039 hash slots used of 2097152, 46366 control sequences, approximate memory usage: 36 MB
-mkiv lua stats  > lua properties: engine: lua 5.4, used memory: 69 MB, ctx: 66 MB, max: 66 MB, symbol mask: utf (τεχ)
-mkiv lua stats  > runtime: 2.581 seconds, 7 processed pages, 7 shipped pages, 2.712 pages/second
+mkiv lua stats  > tex properties: 740039 hash slots used of 2097152, 46372 control sequences, approximate memory usage: 36 MB
+mkiv lua stats  > lua properties: engine: lua 5.4, used memory: 70 MB, ctx: 66 MB, max: 66 MB, symbol mask: utf (τεχ)
+mkiv lua stats  > runtime: 2.473 seconds, 8 processed pages, 8 shipped pages, 3.234 pages/second
